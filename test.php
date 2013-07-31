@@ -10,7 +10,7 @@ mysql_query("set session character_set_connection=utf8;");
 mysql_query("set session character_set_results=utf8;");
 mysql_query("set session character_set_client=utf8;");
 if(!empty($_GET['id'])) {
-$sql="SELECT * FROM test WHERE id = ".$_GET['id'];
+$sql="SELECT * FROM dowster WHERE id = ".$_GET['id'];
 $result = mysql_query($sql);
 $topic = mysql_fetch_assoc($result);
 }
@@ -96,7 +96,7 @@ $topic = mysql_fetch_assoc($result);
             <nav>
                 <ul>
                     <?php
-                    $sql="select id,title from test";
+                    $sql="select id,title from dowster";
                     $result=mysql_query($sql);
                     while($row=mysql_fetch_assoc($result)) {
                     echo "
